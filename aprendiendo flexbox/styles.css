@@ -1,0 +1,73 @@
+:root{
+
+}
+body{
+    --rojo:red;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+#layout{
+    display: flex;/*Muy necesario organizar uno al lado del otro/ inline-flex*/
+    /*
+    flex-direction: row;
+    flex-wrap: wrap;
+    */
+    flex-flow: row wrap;
+    justify-content: space-evenly;/*flex-start por defecto o left, flex-end al final o rigth, space-around distribuye bien el contenido, space-between espacio pegando el primero y el ultimo en las esquinas, space-evenly centradp y espaciado*/
+    height: 500px;
+    align-items: flex-start;
+    border: 3px solid black;
+    padding: 5px;
+}
+
+.caja{
+    /*flex-grow: 1; 0 es por defecto gracias a esto se adapta al tamaño al 100%*/
+    /*width: 25%;*/
+    /*flex-basis: 25%;*/
+    /*flex-basis: calc((100%/3) - 80px); 80px = margenes Esto es util para dividir de manera exacta*/
+    flex-grow: 1;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    border:4px solid #222;
+    margin: 10px;
+    background-color:gray;
+    
+}
+
+.red{
+    /*order: 4;*/
+    /*flex-grow: 25;*/
+    /*height: 120px;*/
+    align-self: flex-start;
+    background: var(--rojo);
+}
+
+.green{
+    /*order:1;*/
+    /*flex-grow: 4;*/
+    align-self: center;
+    /*margin-top: 6%;*/
+    background: green;
+}
+
+
+.blue{
+    /*order: 2;*/
+    /*flex-grow: 0;
+    flex-shrink: 0;*/
+    align-self: center;
+    background: blue;
+}
+
+
+.orange{
+    /*order: 3;*/
+    /*flex-grow: 5;
+    flex-basis: 100%;*/
+    align-self: flex-end;
+    background: orange;
+}
